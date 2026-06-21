@@ -23,29 +23,23 @@ js/breathe.js   → cue testuale "Inspira/Espira" sincronizzato col cerchio
 - **Accessibilità**: rispetta `prefers-reduced-motion` (disattiva animazione e scroll fluido; il cue resta "Respira con calma"), `aria-label` sulle nav, focus-visible su link e bottoni, colori testo AA-safe.
 - **Responsive**: griglia feature a 1 colonna e header/footer in colonna sotto i 720px.
 
-## Pubblicare su GitHub Pages
+## Sviluppo locale
 
-1. Crea un repo (es. `anna-sito`) e fai push di questi file nella **root** del branch `main`:
-   ```bash
-   cd anna-sito
-   git init
-   git add .
-   git commit -m "Sito Anna: home, privacy, supporto"
-   git branch -M main
-   git remote add origin https://github.com/TUOUSER/anna-sito.git
-   git push -u origin main
-   ```
-2. Su GitHub: **Settings → Pages → Build and deployment → Source: Deploy from a branch**, branch `main`, cartella `/ (root)`. Salva.
-3. Dopo qualche minuto il sito sarà live su:
-   `https://TUOUSER.github.io/anna-sito/`
+Non serve alcuna build. Apri `index.html` nel browser per un'anteprima, oppure servi la cartella con un server statico:
+
+```bash
+python3 -m http.server 8000
+# poi apri http://localhost:8000
+```
 
 ## URL da inserire in App Store Connect
 
-- **Privacy Policy URL**: `https://TUOUSER.github.io/anna-sito/privacy.html`
-- **Support URL**: `https://TUOUSER.github.io/anna-sito/support.html`
-- **Marketing URL** (opzionale): `https://TUOUSER.github.io/anna-sito/`
+Una volta pubblicato il sito, inserisci in App Store Connect:
+
+- **Privacy Policy URL** → `privacy.html`
+- **Support URL** → `support.html`
+- **Marketing URL** (opzionale) → `index.html`
 
 ## Prima di pubblicare
 - Verifica che `g_scappaticci@icloud.com` sia l'indirizzo che vuoi rendere pubblico (compare in chiaro sia su Privacy che su Supporto).
 - Se in futuro l'app introduce HealthKit, sincronizzazione cloud o terze parti, **aggiorna `privacy.html`** di conseguenza — è un documento che deve restare vero, non solo presente.
-- Apri `index.html` localmente nel browser per un'anteprima veloce prima del push.
