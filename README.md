@@ -1,45 +1,32 @@
-# anna-sito
+# Anna
 
-Sito statico di supporto per l'app iOS **Anna**, un'app di respirazione guidata per i momenti di forte stress. Tutti i contenuti dell'utente (frasi, promemoria, foto, sessioni) restano in locale sul dispositivo tramite SwiftData — nessun account, nessun server, nessun tracciamento.
+**Resta con il tuo respiro.**
 
-Il sito serve in primo luogo a soddisfare i requisiti della App Review di Apple (Support URL e Privacy Policy URL), oltre a presentare l'app.
+Anna ti accompagna nei momenti di forte stress con un respiro guidato, lento e gentile. È un'app di benessere per iPhone: esercizi di respirazione, rilassamento e radicamento per quando ne hai bisogno.
 
-Nessuna dipendenza, nessuna build: solo HTML/CSS/JS statico. Unica risorsa esterna sono i font Google (Fraunces + Inter).
+## Cosa offre
 
-## Struttura
-```
-index.html      → home / presentazione (hero, 3 feature, disclaimer)
-privacy.html    → informativa sulla privacy
-support.html    → contatto supporto + FAQ
-css/style.css   → stili (palette salvia/lavanda, layout responsive)
-js/breathe.js   → cue testuale "Inspira/Espira" sincronizzato col cerchio
-```
+- **Respiro guidato** — Un ritmo lento, pensato per accompagnarti, non per essere ricordato a memoria. Puoi cambiare tecnica, incluso il 5-4-3-2-1.
+- **Le tue cose** — Le parole, le foto e le coping card che hai scelto tu, sempre a portata di mano. In «Il mio spazio» trovi anche lo storico dei tuoi momenti.
+- **Come ti senti** — Puoi segnare emozioni e intensità, con calma e senza giudizio.
+- **Senza fretta** — Nessun account, nessuna connessione necessaria. Solo tu e l'app.
 
-## Dettagli
+## Privacy
 
-- **Lingua**: italiano (`lang="it"`).
-- **Home**: cerchio che pulsa con animazione `breathe` (ciclo 10s); `breathe.js` alterna il testo "Inspira" (4s) / "Espira" (6s). Tre feature: *Respiro guidato*, *Le tue cose*, *Senza fretta*. Disclaimer: Anna non è un dispositivo medico.
-- **Privacy / Supporto**: contatto via `g_scappaticci@icloud.com` (in chiaro su entrambe le pagine). Titolare: Giuseppe Scappaticci.
-- **Accessibilità**: rispetta `prefers-reduced-motion` (disattiva animazione e scroll fluido; il cue resta "Respira con calma"), `aria-label` sulle nav, focus-visible su link e bottoni, colori testo AA-safe.
-- **Responsive**: griglia feature a 1 colonna e header/footer in colonna sotto i 720px.
+Il principio è semplice: **tutto resta sul tuo dispositivo.** Anna non raccoglie i tuoi dati, non li invia ad alcun server, non richiede un account e non usa tracciamento o pubblicità. Puoi cancellare tutto quando vuoi da «Il mio spazio» → «Elimina tutti i dati».
 
-## Sviluppo locale
+## Sostieni
 
-Non serve alcuna build. Apri `index.html` nel browser per un'anteprima, oppure servi la cartella con un server statico:
+Anna è e resta utilizzabile gratuitamente. Se ti fa stare bene e vuoi, puoi sostenere lo sviluppo con un piccolo contributo facoltativo — tramite gli acquisti in-app oppure su [GitHub Sponsors](https://github.com/sponsors/Leixien). Nessuna pressione: il tuo benessere viene prima di tutto.
 
-```bash
-python3 -m http.server 8000
-# poi apri http://localhost:8000
-```
+## Avvertenza
 
-## URL da inserire in App Store Connect
+Anna è uno strumento di benessere. Non è un dispositivo medico e non sostituisce il parere di un medico o di uno psicologo. In caso di emergenza, contatta i numeri d'aiuto.
 
-Una volta pubblicato il sito, inserisci in App Store Connect:
+## Contatti
 
-- **Privacy Policy URL** → `privacy.html`
-- **Support URL** → `support.html`
-- **Marketing URL** (opzionale) → `index.html`
+Per qualsiasi domanda, scrivi a **g_scappaticci@icloud.com**.
 
-## Prima di pubblicare
-- Verifica che `g_scappaticci@icloud.com` sia l'indirizzo che vuoi rendere pubblico (compare in chiaro sia su Privacy che su Supporto).
-- Se in futuro l'app introduce HealthKit, sincronizzazione cloud o terze parti, **aggiorna `privacy.html`** di conseguenza — è un documento che deve restare vero, non solo presente.
+---
+
+© 2026 Giuseppe Scappaticci
